@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 231 - Course Home Page | Dmytro Ivanytskyi</title>
+    <meta name="description" content="WDD 231 Course Home Page for Dmytro Ivanytskyi - Frontend Web Development I at BYU-Idaho. Includes course listings, completion status and contact information.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <header>
+        <div class="header-content">
+            <img class="logo" src="images/logo.svg" alt="Site logo - Dmytro Ivanytskyi" width="40" height="40">
+            <span class="site-name">Dmytro Ivanytskyi Project</span>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="chamber/index.html">Chamber Project</a></li>
+                <li><a href="final/index.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="grid-top">
+            <section class="card about">
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is Dmytro Ivanytskyi. I am a software developer from Kyiv, Ukraine, 
+                    currently studying Web and Computer Programming at BYU-Idaho. While I have professional 
+                    experience with backend development, I am passionate about building accessible, responsive 
+                    frontend web experiences. This page is part of WDD 231 - Frontend Web Development I, 
+                    showcasing my progress in HTML, CSS, and JavaScript through weekly assignments. When I'm not 
+                    at my computer, you can usually find me at the gym or out for a long run.
+                </p>
+            </section>
+
+            <section class="card photo">
+                <h2>Student Photo</h2>
+                <img src="images/student-photo.webp" alt="Portrait of Dmytro Ivanytskyi" width="800" height="1072" loading="lazy">
+            </section>
+        </div>
+
+        <section class="card courses-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons" role="group" aria-label="Filter courses by subject">
+                <button type="button" class="filter active" data-filter="all">All</button>
+                <button type="button" class="filter" data-filter="WDD">WDD</button>
+                <button type="button" class="filter" data-filter="CSE">CSE</button>
+            </div>
+            <p class="credits-summary">The total credits for the courses listed above is <span id="totalCredits">0</span></p>
+            <div id="courseList" class="course-list" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/dmytro-ivanytskyi-a7187b201/" target="_blank" aria-label="LinkedIn profile">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+            </a>
+            <a href="https://github.com/Trident1998" target="_blank" aria-label="GitHub profile">
+                <img src="images/github.svg" alt="GitHub" width="32" height="32">
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="X profile">
+                <img src="images/x.svg" alt="X" width="32" height="32">
+            </a>
+        </div>
+        <p class="copyright">&copy; <span id="currentyear"></span> Dmytro Ivanytskyi &bull; Ukraine</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
