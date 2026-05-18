@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Nova Poshta",
+        "address": "28 Verkhovynna St., Kyiv 03115",
+        "phone": "+380 800 500 609",
+        "website": "https://novaposhta.ua",
+        "image": "nova-poshta.png",
+        "membership": 3,
+        "tagline": "Ukraine's largest postal and logistics operator",
+        "founded": 2001
+    },
+    {
+        "name": "Roshen",
+        "address": "1 Naberezhno-Khreshchatytska St., Kyiv 04070",
+        "phone": "+380 800 309 309",
+        "website": "https://roshen.com",
+        "image": "roshen.png",
+        "membership": 3,
+        "tagline": "International confectionery corporation",
+        "founded": 1996
+    },
+    {
+        "name": "Grammarly",
+        "address": "39A Tarasa Shevchenka Blvd., Kyiv 01032",
+        "phone": "+380 44 392 0001",
+        "website": "https://grammarly.com",
+        "image": "grammarly.png",
+        "membership": 3,
+        "tagline": "AI-powered writing assistant - Kyiv-born",
+        "founded": 2009
+    },
+    {
+        "name": "Kyivstar",
+        "address": "51 Degtiarivska St., Kyiv 03113",
+        "phone": "+380 67 902 0466",
+        "website": "https://kyivstar.ua",
+        "image": "kyivstar.png",
+        "membership": 2,
+        "tagline": "Leading mobile network operator in Ukraine",
+        "founded": 1994
+    },
+    {
+        "name": "Monobank",
+        "address": "1-D Mykoly Pymonenka St., Kyiv 04050",
+        "phone": "+380 800 205 205",
+        "website": "https://monobank.ua",
+        "image": "monobank.png",
+        "membership": 2,
+        "tagline": "Mobile-first digital bank for Ukraine",
+        "founded": 2017
+    },
+    {
+        "name": "MacPaw",
+        "address": "81 Verkhnia Velosypedna St., Kyiv 04086",
+        "phone": "+380 44 222 2220",
+        "website": "https://macpaw.com",
+        "image": "macpaw.png",
+        "membership": 2,
+        "tagline": "Makers of CleanMyMac, Setapp, and other macOS apps",
+        "founded": 2008
+    },
+    {
+        "name": "Ajax Systems",
+        "address": "8/2 Hlybochytska St., Kyiv 04050",
+        "phone": "+380 44 290 0404",
+        "website": "https://ajax.systems",
+        "image": "ajax-systems.png",
+        "membership": 1,
+        "tagline": "Award-winning smart security and IoT manufacturer",
+        "founded": 2011
+    },
+    {
+        "name": "EPAM Ukraine",
+        "address": "19 Ivana Mykolaichuka St., Kyiv 02002",
+        "phone": "+380 44 230 4000",
+        "website": "https://epam.com",
+        "image": "epam.png",
+        "membership": 1,
+        "tagline": "Global software engineering and consulting services",
+        "founded": 1993
+    },
+    {
+        "name": "GlobalLogic Ukraine",
+        "address": "84 Antonovycha St., Kyiv 03150",
+        "phone": "+380 44 392 7370",
+        "website": "https://globallogic.com",
+        "image": "globallogic.png",
+        "membership": 1,
+        "tagline": "Digital product engineering services",
+        "founded": 2000
+    },
+    {
+        "name": "Silpo",
+        "address": "30/32 Avtozavodska St., Kyiv 04074",
+        "phone": "+380 800 305 070",
+        "website": "https://silpo.ua",
+        "image": "silpo.png",
+        "membership": 1,
+        "tagline": "Premium supermarket chain operated by Fozzy Group",
+        "founded": 1998
+    }
+]

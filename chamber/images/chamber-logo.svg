@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kyiv Chamber of Commerce logo">
+    <circle cx="32" cy="32" r="30" fill="#14365e" stroke="#c9a227" stroke-width="3"/>
+    <text x="32" y="29" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#c9a227">KYIV</text>
+    <line x1="14" y1="34" x2="50" y2="34" stroke="#c9a227" stroke-width="1.5"/>
+    <text x="32" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#ffffff">CHAMBER</text>
+</svg>

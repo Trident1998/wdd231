@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory - Kyiv Chamber of Commerce | WDD 231</title>
+    <meta name="description" content="Member business directory for the Kyiv Chamber of Commerce - search local businesses, view membership levels, and switch between grid and list views.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <meta property="og:title" content="Business Directory - Kyiv Chamber of Commerce">
+    <meta property="og:description" content="Browse member businesses of the Kyiv Chamber of Commerce.">
+    <meta property="og:image" content="https://trident1998.github.io/wdd231/chamber/images/chamber-logo.svg">
+    <meta property="og:url" content="https://trident1998.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="images/chamber-favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/chamber-logo.svg" alt="Kyiv Chamber of Commerce logo" width="48" height="48">
+                <span class="brand-name">Kyiv Chamber<br>of Commerce</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Business Directory</h1>
+            <p>Member businesses of the Kyiv Chamber of Commerce.</p>
+        </section>
+
+        <section class="view-controls" aria-label="Choose directory layout">
+            <button type="button" id="view-grid" class="view-btn active" aria-pressed="true" aria-label="Grid view">
+                <span class="icon-grid" aria-hidden="true"></span>
+                <span class="view-label">Grid</span>
+            </button>
+            <button type="button" id="view-list" class="view-btn" aria-pressed="false" aria-label="List view">
+                <span class="icon-list" aria-hidden="true"></span>
+                <span class="view-label">List</span>
+            </button>
+        </section>
+
+        <section id="members" class="members grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Kyiv Chamber of Commerce</p>
+                <p>10 Khreshchatyk Street</p>
+                <p>Kyiv 01001, Ukraine</p>
+                <p>info@kyivchamber.ua</p>
+                <p>+380 44 555 0000</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Class Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Kyiv Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
