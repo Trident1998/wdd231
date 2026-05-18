@@ -15,7 +15,7 @@
     .primary-nav ul {
         display: flex !important;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: flex-end;
         background-color: var(--color-primary);
     }
 
@@ -28,7 +28,7 @@
     .primary-nav a:hover,
     .primary-nav a:focus {
         background-color: var(--color-accent);
-        color: var(--color-primary-dark);
+        color: #ffffff;
     }
 
     .primary-nav a.active {

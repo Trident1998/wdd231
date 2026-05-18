@@ -2,12 +2,12 @@
 :root {
     --color-primary: #1f3a5f;
     --color-primary-dark: #142a48;
-    --color-accent: #d97742;
+    --color-accent: #823a07;
     --color-accent-light: #f2d3bf;
     --color-bg: #f7f4ef;
     --color-surface: #ffffff;
     --color-text: #1c1c1c;
-    --color-muted: #5b6471;
+    --color-muted: #4a525e;
     --color-border: #d8d2c7;
     --color-completed-bg: #1f3a5f;
     --color-completed-text: #ffffff;
@@ -159,13 +159,13 @@ header {
 .primary-nav a:hover,
 .primary-nav a:focus {
     background-color: var(--color-accent);
-    color: var(--color-primary-dark);
+    color: #ffffff;
     outline: none;
 }
 
 .primary-nav a.active {
     background-color: var(--color-primary-dark);
-    color: var(--color-accent);
+    color: #ffffff;
     border-left: 4px solid var(--color-accent);
 }
 
@@ -302,7 +302,7 @@ main h1 {
 
 .course-card.completed::before {
     content: '\2714  ';
-    color: var(--color-accent);
+    color: #ffffff;
     font-weight: 700;
 }
 
