@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyiv Chamber of Commerce - Home | WDD 231</title>
+    <meta name="description" content="Official home page of the Kyiv Chamber of Commerce - connecting Kyiv businesses with events, networking, weather, and member spotlights.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <meta property="og:title" content="Kyiv Chamber of Commerce - Home">
+    <meta property="og:description" content="Connecting businesses across Kyiv - events, weather, and member spotlights.">
+    <meta property="og:image" content="https://trident1998.github.io/wdd231/chamber/images/chamber-logo.svg">
+    <meta property="og:url" content="https://trident1998.github.io/wdd231/chamber/index.html">
+
+    <link rel="icon" href="images/chamber-favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/chamber-logo.svg" alt="Kyiv Chamber of Commerce logo" width="48" height="48">
+                <span class="brand-name">Kyiv Chamber<br>of Commerce</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="hero-image" src="images/hero.webp" alt="Panorama of Kyiv-Pechersk Lavra and the Dnipro River" width="1023" height="352">
+            <div class="hero-content">
+                <h1>Build Business in Kyiv</h1>
+                <p>Connecting local entrepreneurs, investors, and innovators across the capital.</p>
+                <a class="cta" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="card events-section">
+                <h2>Current Events</h2>
+                <article class="event">
+                    <h3>Kyiv Business Networking Mixer</h3>
+                    <p class="event-date">June 12, 2026 &middot; 18:00</p>
+                    <p>Quarterly meetup of chamber members at Podil Coworking. Open to all members and one guest.</p>
+                </article>
+                <article class="event">
+                    <h3>Annual Investment Forum</h3>
+                    <p class="event-date">June 25, 2026 &middot; 09:00</p>
+                    <p>Investors and chamber members gather to discuss growth opportunities in technology, manufacturing, and services.</p>
+                </article>
+                <article class="event">
+                    <h3>Summer Chamber Summit</h3>
+                    <p class="event-date">July 18, 2026 &middot; 10:00</p>
+                    <p>Full-day summit with policy briefings, keynote speakers, and member recognition awards.</p>
+                </article>
+            </section>
+
+            <section class="card weather-section">
+                <h2>Current Weather</h2>
+                <div id="weather-current" class="weather-current" aria-live="polite">
+                    <p>Loading weather...</p>
+                </div>
+                <h3 class="forecast-title">3-Day Forecast</h3>
+                <div id="weather-forecast" class="weather-forecast" aria-live="polite"></div>
+            </section>
+        </div>
+
+        <section class="card spotlights-section">
+            <h2>Member Spotlights</h2>
+            <p class="section-intro">Featured gold and silver members of the Kyiv Chamber of Commerce.</p>
+            <div id="spotlight-cards" class="spotlight-cards" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Kyiv Chamber of Commerce</p>
+                <p>10 Khreshchatyk Street</p>
+                <p>Kyiv 01001, Ukraine</p>
+                <p>info@kyivchamber.ua</p>
+                <p>+380 44 555 0000</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Class Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Kyiv Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

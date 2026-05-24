@@ -80,3 +80,75 @@
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
+
+/* ===== Home page layout changes for larger views ===== */
+@media (min-width: 640px) {
+    /* Hero: overlay content on top of image */
+    .hero {
+        position: relative;
+    }
+
+    .hero-image {
+        aspect-ratio: 16 / 5;
+    }
+
+    .hero-content {
+        position: absolute;
+        inset: auto 1.5rem 1.5rem auto;
+        max-width: 380px;
+        background-color: rgba(10, 36, 64, 0.88);
+        border-radius: var(--radius);
+        padding: 1.25rem 1.5rem;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Two-column grid: events takes 2/3, weather takes 1/3 */
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    /* Weather: split current and forecast side by side */
+    .weather-current {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .weather-current .temp {
+        font-size: 2.8rem;
+        margin-bottom: 0;
+    }
+
+    /* Spotlights: 3 columns */
+    .spotlight-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 960px) {
+    .hero-image {
+        aspect-ratio: 16 / 4.5;
+    }
+
+    .hero-content {
+        max-width: 460px;
+        inset: auto 2.5rem 2rem auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .home-grid {
+        gap: 2rem;
+    }
+}
