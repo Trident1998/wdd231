@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Kyiv Chamber of Commerce | WDD 231</title>
+    <meta name="description" content="Apply to join the Kyiv Chamber of Commerce - choose a membership level and submit your application to connect with the Kyiv business community.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <meta property="og:title" content="Join the Kyiv Chamber of Commerce">
+    <meta property="og:description" content="Apply for chamber membership and join the Kyiv business community.">
+    <meta property="og:image" content="https://trident1998.github.io/wdd231/chamber/images/chamber-logo.svg">
+    <meta property="og:url" content="https://trident1998.github.io/wdd231/chamber/join.html">
+
+    <link rel="icon" href="images/chamber-favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/chamber-logo.svg" alt="Kyiv Chamber of Commerce logo" width="48" height="48">
+                <span class="brand-name">Kyiv Chamber<br>of Commerce</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Join the Chamber</h1>
+            <p>Apply for membership and connect your business with Kyiv's leading network of entrepreneurs.</p>
+        </section>
+
+        <div class="join-grid">
+            <form class="join-form" method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+
+                    <label>
+                        <span class="field-label">First Name<span class="req" aria-hidden="true">*</span></span>
+                        <input type="text" name="firstName" id="firstName" required title="Your first name" autocomplete="given-name">
+                    </label>
+
+                    <label>
+                        <span class="field-label">Last Name<span class="req" aria-hidden="true">*</span></span>
+                        <input type="text" name="lastName" id="lastName" required title="Your last name" autocomplete="family-name">
+                    </label>
+
+                    <label>
+                        <span class="field-label">Organizational Title</span>
+                        <input type="text" name="orgTitle" id="orgTitle" title="Your title within the organization (min 7 characters; letters, hyphens, spaces only)" autocomplete="organization-title" pattern="^[A-Za-z\- ]{7,}$">
+                        <span class="field-hint">At least 7 characters. Letters, hyphens, and spaces only.</span>
+                    </label>
+
+                    <label>
+                        <span class="field-label">Email Address<span class="req" aria-hidden="true">*</span></span>
+                        <input type="email" name="email" id="email" required title="A valid email address where we can reach you" autocomplete="email" placeholder="you@example.com">
+                    </label>
+
+                    <label>
+                        <span class="field-label">Mobile Phone Number<span class="req" aria-hidden="true">*</span></span>
+                        <input type="tel" name="mobile" id="mobile" required title="A mobile phone number" autocomplete="tel" placeholder="+380 99 000 0000">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+
+                    <label>
+                        <span class="field-label">Business / Organization Name<span class="req" aria-hidden="true">*</span></span>
+                        <input type="text" name="organization" id="organization" required title="Name of your business or organization" autocomplete="organization">
+                    </label>
+
+                    <label>
+                        <span class="field-label">Membership Level</span>
+                        <select name="membership" id="membership" title="Choose a membership level">
+                            <option value="">-- Select a level --</option>
+                            <option value="np">NP Membership (Non-Profit)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span class="field-label">Business / Organization Description</span>
+                        <textarea name="description" id="description" title="A short description of your business or organization" rows="4"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <button type="submit" class="cta submit-btn">Submit Application</button>
+            </form>
+
+            <aside class="membership-cards" aria-label="Membership level options">
+                <article class="membership-card level-np">
+                    <h2>NP Membership</h2>
+                    <p class="card-fee">Free &middot; Non-Profit</p>
+                    <p>For registered non-profit organizations.</p>
+                    <button type="button" class="card-link" data-modal="modal-np">View benefits</button>
+                </article>
+
+                <article class="membership-card level-bronze">
+                    <h2>Bronze Membership</h2>
+                    <p class="card-fee">Entry-level</p>
+                    <p>Get listed and join chamber events at a discount.</p>
+                    <button type="button" class="card-link" data-modal="modal-bronze">View benefits</button>
+                </article>
+
+                <article class="membership-card level-silver">
+                    <h2>Silver Membership</h2>
+                    <p class="card-fee">Mid-tier</p>
+                    <p>Featured listing and access to training programs.</p>
+                    <button type="button" class="card-link" data-modal="modal-silver">View benefits</button>
+                </article>
+
+                <article class="membership-card level-gold">
+                    <h2>Gold Membership</h2>
+                    <p class="card-fee">Top-tier</p>
+                    <p>Maximum visibility, spotlight, and concierge access.</p>
+                    <button type="button" class="card-link" data-modal="modal-gold">View benefits</button>
+                </article>
+            </aside>
+        </div>
+
+        <dialog id="modal-np" class="benefits-modal" aria-labelledby="modal-np-title">
+            <h2 id="modal-np-title">NP Membership Benefits</h2>
+            <ul>
+                <li>No membership fee for registered non-profit organizations.</li>
+                <li>Free directory listing on the chamber website.</li>
+                <li>Access to all chamber networking events.</li>
+                <li>Inclusion in the chamber newsletter.</li>
+                <li>Eligibility for non-profit collaboration programs.</li>
+            </ul>
+            <button type="button" class="modal-close" data-close>Close</button>
+        </dialog>
+
+        <dialog id="modal-bronze" class="benefits-modal" aria-labelledby="modal-bronze-title">
+            <h2 id="modal-bronze-title">Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP-level benefits.</li>
+                <li>Listing in the printed chamber directory.</li>
+                <li>10% discount on chamber events and workshops.</li>
+                <li>Rotation in the monthly newsletter sponsor spotlight.</li>
+                <li>Early access to event registration.</li>
+            </ul>
+            <button type="button" class="modal-close" data-close>Close</button>
+        </dialog>
+
+        <dialog id="modal-silver" class="benefits-modal" aria-labelledby="modal-silver-title">
+            <h2 id="modal-silver-title">Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze-level benefits.</li>
+                <li>Featured listing on the chamber directory page.</li>
+                <li>Quarterly training and professional development sessions.</li>
+                <li>20% discount on chamber events.</li>
+                <li>Logo placement in the chamber newsletter.</li>
+                <li>Invitations to private member roundtables.</li>
+            </ul>
+            <button type="button" class="modal-close" data-close>Close</button>
+        </dialog>
+
+        <dialog id="modal-gold" class="benefits-modal" aria-labelledby="modal-gold-title">
+            <h2 id="modal-gold-title">Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver-level benefits.</li>
+                <li>Spotlight position rotation on the chamber home page.</li>
+                <li>Free event sponsorship rotation each year.</li>
+                <li>Dedicated chamber account manager.</li>
+                <li>30% discount on all chamber programs.</li>
+                <li>Priority access to investment forums and trade missions.</li>
+            </ul>
+            <button type="button" class="modal-close" data-close>Close</button>
+        </dialog>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Kyiv Chamber of Commerce</p>
+                <p>10 Khreshchatyk Street</p>
+                <p>Kyiv 01001, Ukraine</p>
+                <p>info@kyivchamber.ua</p>
+                <p>+380 44 555 0000</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Class Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Kyiv Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

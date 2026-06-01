@@ -617,3 +617,293 @@ main {
     text-decoration: underline;
     word-break: break-word;
 }
+
+/* ===== Join page: layout ===== */
+.join-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Form ===== */
+.join-form {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+.join-form fieldset {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem 1rem;
+    margin: 0 0 1rem;
+}
+
+.join-form legend {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    padding: 0 0.5rem;
+    font-size: 1.05rem;
+}
+
+.join-form label {
+    display: block;
+    margin-bottom: 0.85rem;
+}
+
+.join-form .field-label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.join-form .req {
+    color: #b00020;
+    margin-left: 0.15rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--surface);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(20, 54, 94, 0.18);
+}
+
+.join-form input:required:valid,
+.join-form textarea:required:valid {
+    border-color: #2e7d32;
+}
+
+.join-form input:required:invalid:not(:placeholder-shown),
+.join-form input:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #b00020;
+}
+
+.join-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.join-form .field-hint {
+    display: block;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 0.25rem;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+
+/* ===== Membership cards (Join page) ===== */
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.membership-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardSlideIn 0.55s ease-out forwards;
+}
+
+.membership-card.level-np      { border-left-color: #2e7d32; }
+.membership-card.level-bronze  { border-left-color: #8a5a2b; }
+.membership-card.level-silver  { border-left-color: #6e7480; }
+.membership-card.level-gold    { border-left-color: var(--secondary); }
+
+.membership-card:nth-child(1) { animation-delay: 0.10s; }
+.membership-card:nth-child(2) { animation-delay: 0.25s; }
+.membership-card:nth-child(3) { animation-delay: 0.40s; }
+.membership-card:nth-child(4) { animation-delay: 0.55s; }
+
+.membership-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.membership-card .card-fee {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+}
+
+.membership-card p {
+    font-size: 0.92rem;
+    margin-bottom: 0.6rem;
+}
+
+.card-link {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.45rem 0.95rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.card-link:hover,
+.card-link:focus {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    outline: none;
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ===== Modals (benefits) ===== */
+.benefits-modal {
+    border: none;
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem 1.5rem;
+    max-width: 28rem;
+    width: calc(100% - 2rem);
+    background-color: var(--surface);
+    color: var(--text);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.benefits-modal::backdrop {
+    background-color: rgba(10, 36, 64, 0.65);
+}
+
+.benefits-modal h2 {
+    color: var(--primary);
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 3px solid var(--secondary);
+    font-size: 1.2rem;
+}
+
+.benefits-modal ul {
+    padding-left: 1.25rem;
+    margin: 0 0 1rem;
+}
+
+.benefits-modal li {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.modal-close {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.55rem 1.25rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    background-color: var(--primary-dark);
+    outline: none;
+}
+
+/* ===== Thank-You submission list ===== */
+.submission-summary {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+.submission-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin: 0.75rem 0 1rem;
+    padding: 0;
+}
+
+.submission-list .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+    padding: 0.6rem 0.75rem;
+    background-color: var(--bg);
+    border-radius: var(--radius);
+}
+
+.submission-list dt {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.submission-list dd {
+    margin: 0;
+    color: var(--text);
+    word-break: break-word;
+}
+
+.back-link-row {
+    text-align: center;
+    margin-top: 0.5rem;
+}

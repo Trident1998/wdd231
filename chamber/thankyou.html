@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Kyiv Chamber of Commerce | WDD 231</title>
+    <meta name="description" content="Thank you for submitting your Kyiv Chamber of Commerce membership application. We have received your information and will be in touch shortly.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <link rel="icon" href="images/chamber-favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/chamber-logo.svg" alt="Kyiv Chamber of Commerce logo" width="48" height="48">
+                <span class="brand-name">Kyiv Chamber<br>of Commerce</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Thank You!</h1>
+            <p>Your membership application has been received. A chamber representative will contact you within 2 business days.</p>
+        </section>
+
+        <section class="card submission-summary">
+            <h2>Your Submission</h2>
+            <dl id="submissionList" class="submission-list" aria-live="polite">
+                <p>Loading your information...</p>
+            </dl>
+            <p class="back-link-row">
+                <a class="cta" href="index.html">Return to Home</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Kyiv Chamber of Commerce</p>
+                <p>10 Khreshchatyk Street</p>
+                <p>Kyiv 01001, Ukraine</p>
+                <p>info@kyivchamber.ua</p>
+                <p>+380 44 555 0000</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Class Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Kyiv Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
