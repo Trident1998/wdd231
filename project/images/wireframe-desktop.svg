@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="Desktop wireframe of Bukovel Experience home page">
+    <style>
+        .stroke{stroke:#1e3a5f;stroke-width:1.5;fill:#ffffff}
+        .placeholder{stroke:#4a525e;stroke-width:1;fill:#f0ece5}
+        .label{font-family:'Source Sans 3',Arial,sans-serif;font-size:12px;fill:#1a1a1a}
+        .label-bold{font-family:'Source Sans 3',Arial,sans-serif;font-size:13px;font-weight:700;fill:#1e3a5f}
+        .navy{fill:#1e3a5f}
+        .accent{fill:#9c3f0a}
+        .x{stroke:#4a525e;stroke-width:1}
+    </style>
+
+    <rect x="0" y="0" width="900" height="600" fill="#faf7f2"/>
+
+    <!-- Header -->
+    <rect class="navy" x="20" y="20" width="860" height="56"/>
+    <rect class="placeholder" x="35" y="32" width="32" height="32"/>
+    <text class="label-bold" x="75" y="48" fill="#ffffff" font-size="14">Bukovel Experience</text>
+    <text class="label" x="75" y="64" fill="#ffd5b8">Activities &amp; User Reviews</text>
+    <text class="label" x="600" y="55" fill="#ffffff" font-weight="700">Home</text>
+    <text class="label" x="650" y="55" fill="#ffffff">Activities</text>
+    <text class="label" x="715" y="55" fill="#ffffff">Reviews</text>
+    <text class="label" x="775" y="55" fill="#ffffff">Submit</text>
+    <rect class="accent" x="595" y="60" width="32" height="3"/>
+
+    <!-- Hero carousel with arrows -->
+    <rect class="placeholder" x="20" y="90" width="860" height="220"/>
+    <line class="x" x1="20" y1="90" x2="880" y2="310"/>
+    <line class="x" x1="880" y1="90" x2="20" y2="310"/>
+    <text class="label" x="395" y="205">scalable, responsive carousel slide</text>
+
+    <!-- left arrow -->
+    <circle cx="50" cy="200" r="18" fill="#ffffff" stroke="#1e3a5f" stroke-width="1.5"/>
+    <text class="label-bold" x="50" y="206" text-anchor="middle">&lt;</text>
+    <!-- right arrow -->
+    <circle cx="850" cy="200" r="18" fill="#ffffff" stroke="#1e3a5f" stroke-width="1.5"/>
+    <text class="label-bold" x="850" y="206" text-anchor="middle">&gt;</text>
+
+    <!-- carousel dots -->
+    <circle cx="430" cy="295" r="5" class="accent"/>
+    <circle cx="446" cy="295" r="5" fill="#d8d2c7"/>
+    <circle cx="462" cy="295" r="5" fill="#d8d2c7"/>
+    <circle cx="478" cy="295" r="5" fill="#d8d2c7"/>
+
+    <!-- Hero CTA overlay -->
+    <rect class="accent" x="700" y="250" width="160" height="36" rx="4"/>
+    <text class="label" x="780" y="273" text-anchor="middle" fill="#ffffff" font-weight="700">Explore Activities</text>
+
+    <!-- Section row: Weather + News (2 cols) -->
+
+    <!-- Weather widget -->
+    <rect class="stroke" x="20" y="335" width="420" height="170"/>
+    <rect class="navy" x="20" y="335" width="420" height="26"/>
+    <text class="label" x="35" y="354" fill="#ffffff" font-weight="700">Live Weather - Bukovel</text>
+    <circle cx="80" cy="410" r="22" fill="#ffd5b8"/>
+    <text class="label-bold" x="135" y="408" font-size="26">-3 C</text>
+    <text class="label" x="135" y="428">Light snow - Wind 4 m/s</text>
+    <text class="label" x="35" y="465">Today: -2 / -8 C</text>
+    <text class="label" x="35" y="482">Tomorrow: -1 / -6 C</text>
+    <text class="label" x="35" y="499">Wed: 0 / -4 C</text>
+
+    <!-- News -->
+    <rect class="stroke" x="460" y="335" width="420" height="170"/>
+    <rect class="navy" x="460" y="335" width="420" height="26"/>
+    <text class="label" x="475" y="354" fill="#ffffff" font-weight="700">Latest News</text>
+    <text class="label-bold" x="475" y="382">Season pass sales open</text>
+    <text class="label" x="475" y="399">Dec 1 - early bird discount ends Dec 15.</text>
+    <line class="x" x1="475" y1="410" x2="865" y2="410"/>
+    <text class="label-bold" x="475" y="430">New summer trails announced</text>
+    <text class="label" x="475" y="447">Five trails added for warm-season visitors.</text>
+    <line class="x" x1="475" y1="458" x2="865" y2="458"/>
+    <text class="label-bold" x="475" y="478">Snowboard school enrollment</text>
+    <text class="label" x="475" y="495">Beginner cohort opens Dec 20.</text>
+
+    <!-- Footer -->
+    <rect class="navy" x="0" y="552" width="900" height="48"/>
+    <text class="label" x="20" y="572" fill="#ffffff">Bukovel Experience - WDD 231 Individual Project</text>
+    <text class="label" x="20" y="590" fill="#ffd5b8">Dmytro Ivanytskyi - 2026</text>
+</svg>

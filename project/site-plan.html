@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Bukovel Experience | WDD 231</title>
+    <meta name="description" content="W05 site plan for the Bukovel Experience individual project - a four-page platform showcasing activities at the Bukovel resort with a user reviews system.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <p class="eyebrow">WDD 231 - Web Frontend Development I</p>
+            <h1>Bukovel Experience</h1>
+            <p class="subtitle">W05 Site Plan &middot; Individual Final Project</p>
+            <p><a class="back-link" href="../index.html">&larr; Back to WDD 231 home</a></p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="site-name" class="panel">
+            <h2>Site Name</h2>
+            <p class="site-name">Bukovel Experience: Activities Gallery &amp; User Reviews Platform</p>
+            <p class="rationale">
+                "Bukovel" is the immediately recognizable name of Ukraine's largest alpine resort,
+                making the site instantly identifiable to anyone searching for the destination.
+                "Experience" frames the content not as a brochure but as a curated story told
+                through both editorial content and real visitor reviews. The subtitle clarifies
+                the two pillars of the site: a gallery of seasonal activities and a community
+                space for traveler reviews.
+            </p>
+        </section>
+
+        <section id="site-purpose" class="panel">
+            <h2>Site Purpose</h2>
+            <p>
+                The Bukovel Experience site provides a single hub where travelers can discover
+                the seasonal activities available at the Bukovel resort in the Ukrainian
+                Carpathians and read authentic reviews submitted by previous visitors. Users
+                can filter activities by season (winter or summer), open detailed information
+                in interactive modals, sort and like community reviews, and submit their own
+                experiences through a moderated form. The site is intended to serve both winter
+                sports enthusiasts and warm-season travelers planning a trip to Bukovel.
+            </p>
+        </section>
+
+        <section id="scenarios" class="panel">
+            <h2>Scenarios</h2>
+            <p class="section-intro">
+                Representative questions from the target audience that drive the content
+                strategy of the site:
+            </p>
+            <ul>
+                <li>
+                    "I am planning my first winter trip to Bukovel - which slopes and
+                    activities are appropriate for snowboarding beginners, and what equipment
+                    rental options are typically available?"
+                </li>
+                <li>
+                    "I want to visit the Carpathians in July - what do recent visitors say
+                    about hiking trails, mountain lakes, and the overall experience of
+                    Bukovel during the warm season?"
+                </li>
+                <li>
+                    "I just returned from a Bukovel trip and want to share my experience -
+                    how do I submit a review that future travelers can sort and like along
+                    with the existing community reviews?"
+                </li>
+            </ul>
+        </section>
+
+        <section id="color-scheme" class="panel">
+            <h2>Color Scheme</h2>
+            <p>
+                The palette draws on the natural visual identity of the Ukrainian Carpathians:
+                a deep evening sky over the slopes, the warm auburn of autumn forests, and
+                the fresh snow that defines the winter season.
+            </p>
+            <div class="design-grid">
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#1e3a5f;"></div>
+                    <p><strong>Alpine Navy</strong></p>
+                    <p>#1e3a5f</p>
+                    <p class="muted">Page header, footer, primary headings (h1, h2), navigation background</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#9c3f0a;"></div>
+                    <p><strong>Carpathian Auburn</strong></p>
+                    <p>#9c3f0a</p>
+                    <p class="muted">Calls to action, hyperlinks, active navigation states, accent borders</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#faf7f2;border:1px solid #d8d2c7;"></div>
+                    <p><strong>Snow</strong></p>
+                    <p>#faf7f2</p>
+                    <p class="muted">Page background, light surfaces</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#1a1a1a;"></div>
+                    <p><strong>Charcoal</strong></p>
+                    <p>#1a1a1a</p>
+                    <p class="muted">Body text, primary readable content</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#4a525e;"></div>
+                    <p><strong>Gray-Blue</strong></p>
+                    <p>#4a525e</p>
+                    <p class="muted">Secondary text, captions, metadata</p>
+                </div>
+            </div>
+            <p class="note">
+                All foreground/background pairings on this document and across the final
+                project meet WCAG AAA contrast (7:1 minimum for normal text).
+            </p>
+        </section>
+
+        <section id="typography" class="panel">
+            <h2>Typography</h2>
+            <p>
+                Two complementary Google Fonts are used across the document and the final
+                project to balance personality with readability.
+            </p>
+
+            <div class="font-block">
+                <p class="font-label">Headings</p>
+                <p class="font-sample heading-sample">Discover Bukovel This Season</p>
+                <p class="muted">
+                    <strong>Oswald</strong> (weight 600) - a slightly condensed, athletic
+                    sans-serif used for h1, h2, and h3. Evokes mountain signage and sport
+                    posters.
+                </p>
+            </div>
+
+            <div class="font-block">
+                <p class="font-label">Body</p>
+                <p class="font-sample body-sample">
+                    Browse 15+ seasonal activities, filter by winter or summer, read what
+                    fellow travelers thought about each trail and slope, and contribute
+                    your own review when you return.
+                </p>
+                <p class="muted">
+                    <strong>Source Sans 3</strong> (weight 400 regular, 600 semibold, 700
+                    bold) - a modern, highly legible sans-serif used for body text, labels,
+                    navigation, and UI elements.
+                </p>
+            </div>
+        </section>
+
+        <section id="wireframes" class="panel">
+            <h2>Wireframes</h2>
+            <p>
+                Low-fidelity layout sketches for the Home page in mobile and desktop views.
+                Color and typography choices defined above are applied consistently across
+                all four planned pages.
+            </p>
+
+            <h3>Mobile (320 - 639 px)</h3>
+            <figure>
+                <img src="images/wireframe-mobile.svg" alt="Wireframe of the Bukovel Experience home page in mobile view" width="360" height="640" loading="lazy">
+                <figcaption>Mobile home page wireframe</figcaption>
+            </figure>
+
+            <h3>Desktop (960 px and wider)</h3>
+            <figure>
+                <img src="images/wireframe-desktop.svg" alt="Wireframe of the Bukovel Experience home page in desktop view" width="900" height="600" loading="lazy">
+                <figcaption>Desktop home page wireframe</figcaption>
+            </figure>
+        </section>
+
+        <section id="pages" class="panel">
+            <h2>Planned Pages</h2>
+            <ol class="page-list">
+                <li>
+                    <strong>Home (index.html)</strong> - Hero with custom CSS/JS photo carousel,
+                    live Bukovel weather via external API, recent news section, calls to action
+                    leading to Activities and Submit Review.
+                </li>
+                <li>
+                    <strong>Activities Gallery (activities.html)</strong> - Dynamic grid of
+                    15+ activities loaded from a local JSON file. Users filter by season
+                    (Winter / Summer / All) using array filter. Clicking a card opens a
+                    modal dialog with the full description and a larger image.
+                </li>
+                <li>
+                    <strong>Reviews (reviews.html)</strong> - List of community reviews
+                    merged from a default JSON file and user submissions stored in
+                    LocalStorage. Sortable by newest or most-liked using array sort. Each
+                    review has a "Like" button that persists to LocalStorage.
+                </li>
+                <li>
+                    <strong>Submit Review (submit.html)</strong> - HTML form for writing
+                    a new review. On submit, the new review is saved to LocalStorage and
+                    the user is redirected to a thank-you action page that displays their
+                    submission.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>&copy; 2026 Dmytro Ivanytskyi &middot; WDD 231 Individual Project &middot; Bukovel Experience</p>
+        </div>
+    </footer>
+</body>
+</html>
