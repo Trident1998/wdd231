@@ -176,3 +176,64 @@
         gap: 2rem;
     }
 }
+
+/* ===== Discover: medium screens (640 - 1023 px) - heroes full-width, then 2-col ===== */
+@media (min-width: 640px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "a6 a6"
+            "a3 a3"
+            "a1 a2"
+            "a4 a5"
+            "a7 a8";
+        gap: 1.25rem;
+    }
+
+    /* Hover effect on the images - desktop/tablet only (NOT on mobile) */
+    .discover-card figure {
+        position: relative;
+    }
+
+    .discover-card figure img {
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .discover-card:hover figure img,
+    .discover-card:focus-within figure img {
+        transform: scale(1.06);
+        filter: brightness(1.06) saturate(1.1);
+    }
+}
+
+/* ===== Discover: large screens (1024 px+) - dual-hero magazine layout ===== */
+@media (min-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "a6 a6 a3 a3"
+            "a6 a6 a3 a3"
+            "a1 a2 a4 a5"
+            "a7 a7 a8 a8";
+        gap: 1.5rem;
+    }
+
+    /* Cards 6 (Motherland) and 3 (Maidan) are co-equal 2x2 heroes - let images fill the larger tiles */
+    .discover-card.card-3 figure img,
+    .discover-card.card-6 figure img {
+        aspect-ratio: auto;
+        height: 100%;
+        min-height: 240px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .discover-card figure img {
+        transition: none;
+    }
+    .discover-card:hover figure img,
+    .discover-card:focus-within figure img {
+        transform: none;
+        filter: none;
+    }
+}

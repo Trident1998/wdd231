@@ -907,3 +907,170 @@ main {
     text-align: center;
     margin-top: 0.5rem;
 }
+
+/* ===== Discover page: visit message banner ===== */
+.visit-message {
+    background-color: var(--secondary-light);
+    color: var(--primary-dark);
+    border-left: 4px solid var(--secondary);
+    border-radius: var(--radius);
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+}
+
+.visit-message:empty {
+    display: none;
+}
+
+/* ===== Discover page: grid + cards ===== */
+/* Small screens (320 - 639 px): single column, ordered to match desktop visual hierarchy */
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "a6"
+        "a3"
+        "a1"
+        "a2"
+        "a4"
+        "a5"
+        "a7"
+        "a8";
+}
+
+.discover-card.card-1 { grid-area: a1; }
+.discover-card.card-2 { grid-area: a2; }
+.discover-card.card-3 { grid-area: a3; }
+.discover-card.card-4 { grid-area: a4; }
+.discover-card.card-5 { grid-area: a5; }
+.discover-card.card-6 { grid-area: a6; }
+.discover-card.card-7 { grid-area: a7; }
+.discover-card.card-8 { grid-area: a8; }
+
+.discover-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card h2 {
+    background-color: var(--primary);
+    color: #ffffff;
+    margin: 0;
+    padding: 0.65rem 1rem;
+    font-size: 1.05rem;
+    border-bottom: none;
+}
+
+.discover-card figure {
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--bg);
+}
+
+.discover-card figure img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-size: 0.88rem;
+    color: var(--primary);
+    font-weight: 600;
+    padding: 0.6rem 1rem 0;
+}
+
+.discover-card > p {
+    padding: 0.4rem 1rem 0.75rem;
+    margin: 0;
+    color: var(--text);
+    font-size: 0.92rem;
+    flex: 1;
+}
+
+.discover-card .learn-more {
+    margin: 0 1rem 1rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s ease;
+}
+
+.discover-card .learn-more:hover,
+.discover-card .learn-more:focus {
+    background-color: var(--primary-dark);
+    outline: none;
+}
+
+/* ===== Attributions page ===== */
+.attributions-list {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+.attr-item {
+    background-color: var(--bg);
+    border-left: 4px solid var(--secondary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+}
+
+.attr-item h3 {
+    color: var(--primary);
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+}
+
+.attr-row {
+    margin: 0.2rem 0;
+    font-size: 0.92rem;
+}
+
+.attr-label {
+    font-weight: 700;
+    color: var(--primary);
+    margin-right: 0.35rem;
+}
+
+.attr-value a,
+.attr-license,
+.attr-row a {
+    color: var(--primary);
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+.attr-value a:hover,
+.attr-license:hover,
+.attr-row a:hover {
+    color: var(--primary-dark);
+}
+
+.footer-meta a {
+    color: var(--secondary-light);
+    text-decoration: underline;
+}
+
+.footer-meta a:hover,
+.footer-meta a:focus {
+    color: #ffffff;
+}
