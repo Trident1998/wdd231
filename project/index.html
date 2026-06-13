@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukovel Experience - Home | WDD 231 Final Project</title>
+    <meta name="description" content="Bukovel Experience - discover seasonal activities and visitor reviews of Ukraine's largest alpine resort in the Carpathian Mountains.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <meta property="og:title" content="Bukovel Experience - Home">
+    <meta property="og:description" content="Discover seasonal activities and reviews of Bukovel resort in the Ukrainian Carpathians.">
+    <meta property="og:image" content="https://trident1998.github.io/wdd231/project/images/logo.svg">
+    <meta property="og:url" content="https://trident1998.github.io/wdd231/project/index.html">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/logo.svg" alt="Bukovel Experience logo" width="48" height="48">
+                <span class="brand-name">Bukovel<br>Experience</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-carousel" aria-label="Bukovel highlights">
+            <div id="carousel-track" class="carousel-track"></div>
+            <div class="carousel-controls">
+                <button type="button" class="carousel-btn" id="carousel-prev" aria-label="Previous slide">&lt;</button>
+                <button type="button" class="carousel-btn" id="carousel-next" aria-label="Next slide">&gt;</button>
+            </div>
+            <div id="carousel-dots" class="carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+        </section>
+
+        <div class="home-grid">
+            <section class="card news-section">
+                <h2>Latest News</h2>
+                <div id="news-list" class="news-list" aria-live="polite">
+                    <p class="coming-soon">News will load here.</p>
+                </div>
+            </section>
+
+            <section class="card weather-widget">
+                <h2>Live Weather - Bukovel</h2>
+                <div id="weather-current" class="weather-current" aria-live="polite">
+                    <p class="coming-soon">Loading weather...</p>
+                </div>
+                <h3 class="forecast-title">3-Day Forecast</h3>
+                <div id="weather-forecast" class="forecast-list" aria-live="polite"></div>
+            </section>
+        </div>
+
+        <section class="card">
+            <h2>Plan Your Visit</h2>
+            <p>Browse 15+ seasonal activities, read what fellow travelers thought of their trips, and share your own experience after your visit.</p>
+            <p>
+                <a class="cta" href="activities.html">Explore Activities</a>
+                &nbsp;
+                <a class="cta" href="reviews.html">Read Reviews</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Bukovel Experience</p>
+                <p>Bukovel Resort, Ivano-Frankivsk Oblast, Ukraine</p>
+                <p>info@bukovel-experience.example.ua</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Individual Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Bukovel Experience</p>
+                <p id="lastModified"></p>
+                <p><a href="#" id="video-link">Project demo video</a> &middot; <a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

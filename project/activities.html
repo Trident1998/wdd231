@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Bukovel Experience | WDD 231</title>
+    <meta name="description" content="Browse 15+ seasonal activities at the Bukovel resort - filter by winter or summer, open detailed information for each activity.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <meta property="og:title" content="Activities - Bukovel Experience">
+    <meta property="og:description" content="Seasonal activities at the Bukovel resort in the Ukrainian Carpathians.">
+    <meta property="og:image" content="https://trident1998.github.io/wdd231/project/images/logo.svg">
+    <meta property="og:url" content="https://trident1998.github.io/wdd231/project/activities.html">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/activities.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/logo.svg" alt="Bukovel Experience logo" width="48" height="48">
+                <span class="brand-name">Bukovel<br>Experience</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html" class="active" aria-current="page">Activities</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Activities at Bukovel</h1>
+            <p>From powder slopes in winter to alpine trails in summer - filter by season and open any card for full details.</p>
+        </section>
+
+        <div class="filter-bar" role="group" aria-label="Filter activities by season">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="winter">Winter</button>
+            <button type="button" class="filter-btn" data-filter="summer">Summer</button>
+        </div>
+
+        <p class="coming-soon" id="activity-count">Loading activities...</p>
+
+        <section id="activities-grid" class="activities-grid" aria-live="polite"></section>
+
+        <dialog id="activity-modal" class="activity-modal" aria-labelledby="modal-title">
+            <img id="modal-image" src="" alt="" width="600" height="338">
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <p id="modal-season" class="season-tag"></p>
+                <p id="modal-description"></p>
+                <p id="modal-meta" class="coming-soon"></p>
+                <button type="button" class="modal-close" data-close>Close</button>
+            </div>
+        </dialog>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Bukovel Experience</p>
+                <p>Bukovel Resort, Ivano-Frankivsk Oblast, Ukraine</p>
+                <p>info@bukovel-experience.example.ua</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Individual Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Bukovel Experience</p>
+                <p id="lastModified"></p>
+                <p><a href="#" id="video-link">Project demo video</a> &middot; <a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

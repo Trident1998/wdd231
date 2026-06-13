@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Bukovel Experience | WDD 231</title>
+    <meta name="description" content="Read traveler reviews of the Bukovel resort, sort by newest or most popular, and submit your own experience after your trip.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <meta property="og:title" content="Reviews - Bukovel Experience">
+    <meta property="og:description" content="Visitor reviews and community ratings of Bukovel resort.">
+    <meta property="og:image" content="https://trident1998.github.io/wdd231/project/images/logo.svg">
+    <meta property="og:url" content="https://trident1998.github.io/wdd231/project/reviews.html">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/reviews.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/logo.svg" alt="Bukovel Experience logo" width="48" height="48">
+                <span class="brand-name">Bukovel<br>Experience</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="reviews.html" class="active" aria-current="page">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Traveler Reviews</h1>
+            <p>What guests have to say about their visits to Bukovel - sort the list, like the reviews you found most useful, and add your own at the bottom.</p>
+        </section>
+
+        <div class="reviews-controls" role="group" aria-label="Sort reviews">
+            <span class="controls-label">Sort by:</span>
+            <button type="button" class="filter-btn active" data-sort="newest">Newest</button>
+            <button type="button" class="filter-btn" data-sort="liked">Most liked</button>
+            <span id="review-count" class="coming-soon"></span>
+        </div>
+
+        <section id="reviews-list" class="reviews-list" aria-live="polite"></section>
+
+        <form class="review-form" id="review-form" method="get" action="submit-action.html">
+            <h2>Share Your Experience</h2>
+            <p class="coming-soon">All fields marked with * are required.</p>
+
+            <label>
+                <span class="field-label">Your Name *</span>
+                <input type="text" name="author" required title="Your display name" autocomplete="name">
+            </label>
+
+            <label>
+                <span class="field-label">Season You Visited *</span>
+                <select name="season" required title="Which season did you visit?">
+                    <option value="">-- Choose --</option>
+                    <option value="winter">Winter</option>
+                    <option value="summer">Summer</option>
+                </select>
+            </label>
+
+            <label>
+                <span class="field-label">Rating (1-5) *</span>
+                <input type="number" name="rating" min="1" max="5" required title="Rating from 1 to 5">
+            </label>
+
+            <label>
+                <span class="field-label">Your Review *</span>
+                <textarea name="body" required title="Tell us about your experience" rows="4"></textarea>
+            </label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <button type="submit" class="cta">Submit Review</button>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Bukovel Experience</p>
+                <p>Bukovel Resort, Ivano-Frankivsk Oblast, Ukraine</p>
+                <p>info@bukovel-experience.example.ua</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Individual Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Bukovel Experience</p>
+                <p id="lastModified"></p>
+                <p><a href="#" id="video-link">Project demo video</a> &middot; <a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

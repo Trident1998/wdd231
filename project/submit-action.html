@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted - Bukovel Experience | WDD 231</title>
+    <meta name="description" content="Thank-you confirmation page after submitting a Bukovel Experience review.">
+    <meta name="author" content="Dmytro Ivanytskyi">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/submit-action.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="images/logo.svg" alt="Bukovel Experience logo" width="48" height="48">
+                <span class="brand-name">Bukovel<br>Experience</span>
+            </a>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Thank You for Your Review</h1>
+            <p>Your review has been saved and added to the community feed.</p>
+        </section>
+
+        <section class="card">
+            <h2>Your Submission</h2>
+            <dl id="submission-list" class="submission-list" aria-live="polite">
+                <p class="coming-soon">Submitted data will appear here.</p>
+            </dl>
+            <p>
+                <a class="cta" href="reviews.html">See all reviews</a>
+                &nbsp;
+                <a class="cta" href="index.html" style="background-color: var(--primary);">Back to Home</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <p class="contact-name">Bukovel Experience</p>
+                <p>Bukovel Resort, Ivano-Frankivsk Oblast, Ukraine</p>
+                <p>info@bukovel-experience.example.ua</p>
+            </div>
+            <div class="footer-meta">
+                <p>WDD 231 Individual Project</p>
+                <p>Dmytro Ivanytskyi</p>
+                <p>&copy; <span id="currentyear"></span> Bukovel Experience</p>
+                <p id="lastModified"></p>
+                <p><a href="#" id="video-link">Project demo video</a> &middot; <a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

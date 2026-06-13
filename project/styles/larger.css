@@ -1,0 +1,115 @@
+/* ===== Medium screens (640+) ===== */
+@media (min-width: 640px) {
+    /* Brand and nav share one row */
+    .site-header {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .header-inner {
+        padding: 1rem 1rem 1rem 2rem;
+        flex: 0 0 auto;
+    }
+
+    .primary-nav {
+        flex: 1 1 auto;
+        padding-right: 1rem;
+    }
+
+    .brand-name {
+        font-size: 1.25rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .primary-nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+    .primary-nav a {
+        border-top: none;
+        border-bottom: 4px solid transparent;
+        padding: 0.85rem 1.25rem;
+    }
+
+    .primary-nav a:hover,
+    .primary-nav a:focus {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: var(--accent-light);
+    }
+
+    .primary-nav a.active {
+        border-left: none;
+        border-bottom-color: var(--accent);
+        background-color: transparent;
+        color: var(--accent-light);
+    }
+
+    main {
+        padding: 1.5rem 2rem;
+    }
+
+    .hero-carousel {
+        aspect-ratio: 16 / 7;
+    }
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .forecast-list {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .reviews-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1.5rem 2rem;
+        gap: 2rem;
+    }
+
+    .footer-meta {
+        text-align: right;
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+/* ===== Large screens (1024+) ===== */
+@media (min-width: 1024px) {
+    .hero-carousel {
+        aspect-ratio: 16 / 6;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .reviews-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .home-grid {
+        gap: 2rem;
+    }
+}
