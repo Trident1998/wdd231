@@ -58,15 +58,15 @@
 
         <p class="coming-soon" id="activity-count">Loading activities...</p>
 
-        <section id="activities-grid" class="activities-grid" aria-live="polite"></section>
+        <div id="activities-grid" class="activities-grid" aria-live="polite"></div>
 
         <dialog id="activity-modal" class="activity-modal" aria-labelledby="modal-title">
-            <img id="modal-image" src="" alt="" width="600" height="338">
+            <figure id="modal-figure" class="modal-figure"></figure>
             <div class="modal-body">
-                <h2 id="modal-title"></h2>
-                <p id="modal-season" class="season-tag"></p>
-                <p id="modal-description"></p>
-                <p id="modal-meta" class="coming-soon"></p>
+                <h2 id="modal-title">Activity details</h2>
+                <p id="modal-season" class="season-tag">season</p>
+                <p id="modal-description">Activity description will appear here.</p>
+                <p id="modal-meta" class="coming-soon">Difficulty and duration will appear here.</p>
                 <button type="button" class="modal-close" data-close>Close</button>
             </div>
         </dialog>

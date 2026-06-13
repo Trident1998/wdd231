@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script type="module" src="scripts/home.js" defer></script>
+    <script type="module" src="scripts/home.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -47,10 +47,8 @@
     <main>
         <section class="hero-carousel" aria-label="Bukovel highlights">
             <div id="carousel-track" class="carousel-track"></div>
-            <div class="carousel-controls">
-                <button type="button" class="carousel-btn" id="carousel-prev" aria-label="Previous slide">&lt;</button>
-                <button type="button" class="carousel-btn" id="carousel-next" aria-label="Next slide">&gt;</button>
-            </div>
+            <button type="button" class="carousel-btn carousel-btn-prev" id="carousel-prev" aria-label="Previous slide">&lt;</button>
+            <button type="button" class="carousel-btn carousel-btn-next" id="carousel-next" aria-label="Next slide">&gt;</button>
             <div id="carousel-dots" class="carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
         </section>
 

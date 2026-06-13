@@ -6,7 +6,7 @@ const countEl = document.getElementById('activity-count');
 const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
 
 const modal = document.getElementById('activity-modal');
-const modalImg = document.getElementById('modal-image');
+const modalFigure = document.getElementById('modal-figure');
 const modalTitle = document.getElementById('modal-title');
 const modalSeason = document.getElementById('modal-season');
 const modalDesc = document.getElementById('modal-description');
@@ -46,8 +46,16 @@ function render() {
 function openModal(id) {
     const a = activities.find((x) => x.id === id);
     if (!a) return;
-    modalImg.src = `images/activities/${a.image}`;
-    modalImg.alt = a.title;
+
+    modalFigure.replaceChildren();
+    const img = document.createElement('img');
+    img.src = `images/activities/${a.image}`;
+    img.alt = a.title;
+    img.width = 600;
+    img.height = 338;
+    img.loading = 'lazy';
+    modalFigure.appendChild(img);
+
     modalTitle.textContent = a.title;
     modalSeason.textContent = a.season;
     modalSeason.className = `season-tag season-${a.season}`;
